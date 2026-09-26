@@ -254,21 +254,50 @@ def diagnostics(args, services):
     (Path(args.logs) / "optional-diagnostics.txt").write_text(text)
 
 
+def application_command(args):
+    command = [str(Path(args.venv) / "bin/openwebrx"), "-c", args.config]
+    if args.mode == "dev":
+        command.append("--debug")
+    return command + args.app_args
+
+
+@contextmanager
+def instance_lock(prefix):
+    """Prevent a foreground invocation competing with this prefix's service."""
+    directory = Path(prefix) / "var/run/openwebrx-source"
+    private_directory(directory)
+    with (directory / "instance.lock").open("a") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            raise RuntimeError(f"OpenWebRX is already running from {prefix}") from exc
+        try:
+            yield
+        finally:
+            fcntl.flock(lock, fcntl.LOCK_UN)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("configure", "report", "diagnostics", "run"))
     for key in ("root", "prefix", "venv", "config", "logs", "state", "model", "model-name", "speech-url"):
         parser.add_argument("--" + key, required=True)
     parser.add_argument("--jobs", type=int, default=2)
+    parser.add_argument("--mode", choices=("dev", "prod"), default="dev")
+    parser.add_argument("--app-args", nargs=argparse.REMAINDER, default=[])
     args = parser.parse_args(argv)
     if args.jobs < 1:
         parser.error("--jobs must be positive")
-    sys.path.insert(0, args.root)
+    if args.mode == "dev":
+        sys.path.insert(0, args.root)
     from owrx.config.core import CoreConfig
     CoreConfig.load(Path(args.config))
     from owrx.config import Config
     services = Services(args, Config.get())
     with ExitStack() as stack:
+        if args.action == "run":
+            stack.enter_context(instance_lock(args.prefix))
+        # Release the instance lock only after all owned children have stopped.
         stack.callback(services.close)
         def interrupted(*_):
             raise KeyboardInterrupt()
@@ -279,7 +308,7 @@ def main(argv=None):
             return 0
         services.start()
         if args.action == "run":
-            child = subprocess.Popen([str(Path(args.venv) / "bin/openwebrx"), "-c", args.config, "--debug"], cwd=args.root)
+            child = subprocess.Popen(application_command(args), cwd=args.root)
             services.children.append(child)
             return child.wait()
         report(args, services)
