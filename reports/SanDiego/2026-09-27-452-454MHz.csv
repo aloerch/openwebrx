@@ -20,7 +20,7 @@ frequency_mhz,modulation,confidence,decoder,cc,activity_seconds,activity_percent
 452.838867,4FSK / DMR,Confirmed,DMR,2,178.367,29.73,7617.2,16.15,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
 452.876074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,10.158,1.69,3515.6,11.76,strong candidate,Digital voice trials did not validate a protocol.
 452.89248,4FSK / DMR,Confirmed,DMR,12,43.472,7.25,9375.0,24.16,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
-452.900098,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,17.258,2.88,8203.1,22.25,strong candidate,Digital voice trials did not validate a protocol.
+452.900098,Analog narrowband FM; DCS-like subaudio,Probable,FM (NFM),—,17.258,2.88,8203.1,22.25,strong candidate,Strong ~171 ms repeating subaudio waveform is consistent with DCS; no DCS code was decoded.
 453.0,Receiver DC artifact,Artifact,None,—,599.999,100.0,2929.7,13.27,DC artifact candidate,Moved with tuner center in the offset-control capture.
 453.01377,4FSK / DMR,Confirmed,DMR,4,599.999,100.0,7031.2,13.28,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
 453.113379,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,2.185,0.36,3515.6,9.21,marginal candidate,Weak/brief feature; no validated protocol.
