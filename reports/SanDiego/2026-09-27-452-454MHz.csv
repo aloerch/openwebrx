@@ -1,0 +1,40 @@
+frequency_mhz,modulation,confidence,decoder,cc,activity_seconds,activity_percent,approx_width_hz,max_excess_db,detection,note
+452.013574,4FSK / DMR,Confirmed,DMR,10,599.999,100.0,12890.6,34.27,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.03877,4FSK / DMR,Confirmed,DMR,2,4.041,0.67,7031.2,13.76,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.101465,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,2.185,0.36,3515.6,7.25,marginal candidate,Weak/brief feature; no validated protocol.
+452.11377,Unresolved,Try,DMR first; then FM / NXDN / P25,—,18.569,3.09,4687.5,8.14,marginal candidate,DMR-like timing comb; protocol not confirmed.
+452.176465,4FSK / DMR,Confirmed,DMR,6,191.911,31.99,8203.1,16.26,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.22627,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,7.755,1.29,3515.6,9.58,marginal candidate,Weak/brief feature; no validated protocol.
+452.26377,4FSK / DMR,Confirmed,DMR,11,139.482,23.25,10546.9,24.47,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.276074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,11.25,1.88,3515.6,12.13,strong candidate,Digital voice trials did not validate a protocol.
+452.326172,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,13.981,2.33,2929.7,9.3,marginal candidate,Digital voice trials did not validate a protocol.
+452.35166,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,110.991,18.5,4687.5,10.06,strong candidate,Detected RF feature; no validated protocol.
+452.363672,4FSK / DMR,Confirmed,DMR,3,22.828,3.8,11132.8,27.15,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.375684,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,1.748,0.29,2343.8,7.26,marginal candidate,Weak/brief feature; no validated protocol.
+452.388574,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,0.328,0.05,2343.8,6.82,marginal candidate,Weak/brief feature; no validated protocol.
+452.400879,4FSK / DMR,Confirmed,DMR,3,70.997,11.83,7031.2,11.91,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.438965,Analog narrowband FM carrying Morse audio,Probable,FM (NFM); Morse by ear,—,5.243,0.87,4687.5,19.82,strong candidate,"A ~799 Hz audio tone is keyed with ~50 ms short and ~150 ms long elements and corresponding ~50/150 ms gaps. This strongly supports Morse over FM, likely an identifier. No stable CTCSS or tested paging protocol was confirmed."
+452.651074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,18.569,3.09,3515.6,11.74,strong candidate,Digital voice trials did not validate a protocol.
+452.67627,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,16.166,2.69,4687.5,15.23,strong candidate,Detected RF feature; no validated protocol.
+452.801074,Unresolved,Try,DMR first; then FM / NXDN / P25,—,41.069,6.84,5859.4,9.49,strong candidate,DMR-like timing comb; protocol not confirmed.
+452.838867,4FSK / DMR,Confirmed,DMR,2,178.367,29.73,7617.2,16.15,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.876074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,10.158,1.69,3515.6,11.76,strong candidate,Digital voice trials did not validate a protocol.
+452.89248,4FSK / DMR,Confirmed,DMR,12,43.472,7.25,9375.0,24.16,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+452.900098,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,17.258,2.88,8203.1,22.25,strong candidate,Digital voice trials did not validate a protocol.
+453.0,Receiver DC artifact,Artifact,None,—,599.999,100.0,2929.7,13.27,DC artifact candidate,Moved with tuner center in the offset-control capture.
+453.01377,4FSK / DMR,Confirmed,DMR,4,599.999,100.0,7031.2,13.28,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+453.113379,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,2.185,0.36,3515.6,9.21,marginal candidate,Weak/brief feature; no validated protocol.
+453.151758,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,26.979,4.5,2929.7,9.45,marginal candidate,Digital voice trials did not validate a protocol.
+453.226758,Analog narrowband FM carrying Morse audio,Probable,FM (NFM); Morse by ear,—,4.915,0.82,6445.3,28.46,strong candidate,"A ~1200 Hz audio tone is keyed with ~45 ms short and ~135 ms long elements and corresponding ~45/135 ms gaps. This strongly supports Morse over FM, likely an identifier. No stable CTCSS or tested paging protocol was confirmed."
+453.263672,4FSK / DMR,Confirmed,DMR,5,181.316,30.22,11132.8,29.72,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+453.288574,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,7.318,1.22,4687.5,15.32,strong candidate,Detected RF feature; no validated protocol.
+453.376758,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,113.487,18.91,4101.6,10.96,strong candidate,Digital voice trials did not validate a protocol.
+453.50127,Analog narrowband FM carrying Morse audio,Probable,FM (NFM); Morse by ear,—,21.299,3.55,8203.1,44.62,strong candidate,"A ~1001 Hz audio tone is keyed with ~80 ms short and ~240 ms long elements and corresponding ~80/240 ms gaps. This strongly supports Morse over FM, likely an identifier. No stable CTCSS or tested paging protocol was confirmed."
+453.563965,4FSK / DMR,Confirmed,DMR,1,427.732,71.29,7031.2,13.32,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
+453.663574,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,7.318,1.22,4687.5,13.66,strong candidate,Detected RF feature; no validated protocol.
+453.701074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,10.049,1.67,3515.6,15.63,strong candidate,Digital voice trials did not validate a protocol.
+453.726562,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,4.26,0.71,2929.7,10.64,strong candidate,Detected RF feature; no validated protocol.
+453.81416,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,16.056,2.68,3515.6,11.73,strong candidate,Detected RF feature; no validated protocol.
+453.851367,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,254.188,42.36,9960.9,17.61,strong candidate,Digital voice trials did not validate a protocol.
+453.926074,Unresolved,Try,"FM first; then DMR, NXDN, P25",—,15.073,2.51,8203.1,16.67,strong candidate,Digital voice trials did not validate a protocol.
+453.976465,4FSK / DMR,Confirmed,DMR,5,42.926,7.15,7031.2,12.94,strong candidate,Repeated DMR sync and zero-error Golay slot headers.
