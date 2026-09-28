@@ -1,0 +1,417 @@
+{
+  "date": "2026-09-28",
+  "receiver": "Nooelec NESDR SMArt v5",
+  "receive_area": "University Heights, City of San Diego",
+  "antenna": "Single dipole, user-estimated height about1m",
+  "captures": [
+    {
+      "name": "broadcast",
+      "center_hz": 89500000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 30,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:45:38.951345+00:00",
+      "end_utc": "2026-09-28T07:46:09.811013+00:00",
+      "returncode": 0,
+      "bytes": 144000000,
+      "sample_duration_seconds": 30.0,
+      "sha256": "5dbcacdc1f58dee5a0591249f0a9305f6d6b0fc0683119653f0be0c0e616ede5"
+    },
+    {
+      "name": "noaa-ais",
+      "center_hz": 162200000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 90,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:46:09.878824+00:00",
+      "end_utc": "2026-09-28T07:47:40.680480+00:00",
+      "returncode": 0,
+      "bytes": 432000000,
+      "sample_duration_seconds": 90.0,
+      "sha256": "fbe425b19ba40415095df02279e0140fcfaa2134e21683a0f83b6c8f15008266"
+    },
+    {
+      "name": "adsb",
+      "center_hz": 1090000000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 60,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:47:40.879719+00:00",
+      "end_utc": "2026-09-28T07:48:41.727653+00:00",
+      "returncode": 0,
+      "bytes": 288000000,
+      "sample_duration_seconds": 60.0,
+      "sha256": "4592859f618a0f6f183a9e44549c7a89abab57ceffc00840c440a02e5c68c659"
+    },
+    {
+      "name": "acars",
+      "center_hz": 130800000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 90,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:48:41.855979+00:00",
+      "end_utc": "2026-09-28T07:50:12.713307+00:00",
+      "returncode": 0,
+      "bytes": 432000000,
+      "sample_duration_seconds": 90.0,
+      "sha256": "0611a2ac0e0568199b1949536f3b803a3265326ea083f810357c209785a88d6c"
+    },
+    {
+      "name": "vdl2",
+      "center_hz": 136750000,
+      "sample_rate_hz": 2100000,
+      "duration_requested_seconds": 90,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:50:12.905191+00:00",
+      "end_utc": "2026-09-28T07:51:43.754488+00:00",
+      "returncode": 0,
+      "bytes": 378000000,
+      "sample_duration_seconds": 90.0,
+      "sha256": "ec2a30b3be59287f2ddb0b123f4cb9e4cb30ac9916aa7e69b284705fe780c442"
+    },
+    {
+      "name": "aprs",
+      "center_hz": 144500000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 90,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:51:43.936024+00:00",
+      "end_utc": "2026-09-28T07:53:14.755101+00:00",
+      "returncode": 0,
+      "bytes": 432000000,
+      "sample_duration_seconds": 90.0,
+      "sha256": "77ca1e85b6554032d30420b8a66031a5a4a2e042b8fd391d9c229ce27f25559c"
+    },
+    {
+      "name": "repeaters",
+      "center_hz": 447000000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 60,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:53:14.948807+00:00",
+      "end_utc": "2026-09-28T07:54:15.809695+00:00",
+      "returncode": 0,
+      "bytes": 288000000,
+      "sample_duration_seconds": 60.0,
+      "sha256": "bc886588b97a4684f046643acd25e224c2b9c90c80e2dbff290971d7736c2cb1"
+    },
+    {
+      "name": "hf",
+      "center_hz": 7100000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 90,
+      "direct_sampling": 2,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:54:15.941339+00:00",
+      "end_utc": "2026-09-28T07:55:46.804499+00:00",
+      "returncode": 0,
+      "bytes": 432000000,
+      "sample_duration_seconds": 90.0,
+      "sha256": "952ad972da7a09156f0e07a47d9adbf9707eb77edd18f7c374896cb970bf4e0a"
+    },
+    {
+      "name": "am",
+      "center_hz": 1130000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 30,
+      "direct_sampling": 2,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:57:20.619169+00:00",
+      "end_utc": "2026-09-28T07:57:51.476992+00:00",
+      "returncode": 0,
+      "bytes": 144000000,
+      "sample_duration_seconds": 30.0,
+      "sha256": "f88a167c27554739e8571f43210a772ba300956d5fc2f8c0a033c5e7fb5c2e06"
+    },
+    {
+      "name": "page",
+      "center_hz": 930000000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 60,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:57:51.542923+00:00",
+      "end_utc": "2026-09-28T07:58:52.389687+00:00",
+      "returncode": 0,
+      "bytes": 288000000,
+      "sample_duration_seconds": 60.0,
+      "sha256": "29b6b3db456c87d5d435d4f9988d32de871383ffbeb6c594ac7ec13032dd8b00"
+    },
+    {
+      "name": "mesh",
+      "center_hz": 907850000,
+      "sample_rate_hz": 2400000,
+      "duration_requested_seconds": 120,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T07:58:52.517899+00:00",
+      "end_utc": "2026-09-28T08:00:53.393836+00:00",
+      "returncode": 0,
+      "bytes": 576000000,
+      "sample_duration_seconds": 120.0,
+      "sha256": "ad735527ce6ea3dadec6f4f94873dedf57dea925aa37c5157144103a2de86347"
+    },
+    {
+      "name": "ism",
+      "center_hz": 433920000,
+      "sample_rate_hz": 250000,
+      "duration_requested_seconds": 60,
+      "direct_sampling": 0,
+      "requested_gain_db": 29,
+      "ppm": 0,
+      "format": "cu8",
+      "start_utc": "2026-09-28T08:00:53.653185+00:00",
+      "end_utc": "2026-09-28T08:01:54.749543+00:00",
+      "returncode": 0,
+      "bytes": 30000000,
+      "sample_duration_seconds": 60.0,
+      "sha256": "5ad08eb94d68b7d74fbe3fddabc1a6b63fdf4728b2a43379205427d6668bd6cc"
+    }
+  ],
+  "total_recorded_seconds": 870.0,
+  "rds": {
+    "mode": "RDS",
+    "frequency_hz": 89500000,
+    "input_duration_seconds": 30,
+    "decoder": "redsea",
+    "no_fec": true,
+    "groups": 339,
+    "field_counts": {
+      "pi": 339,
+      "callsign": 339,
+      "bler": 339,
+      "raw_data": 339,
+      "group": 339,
+      "tp": 339,
+      "prog_type": 339,
+      "di": 197,
+      "ta": 197,
+      "is_music": 197,
+      "time_from_start": 338,
+      "ps": 48,
+      "radiotext": 36,
+      "pty_name": 4,
+      "clock_time": 1
+    },
+    "pi_codes": [
+      "0x37C8"
+    ],
+    "program_service_names": [
+      "KPBS.ORG"
+    ],
+    "callsigns": [
+      "KPBS"
+    ],
+    "complete_groups": 338,
+    "partial_groups": 1,
+    "reported_bler_min_percent": 0,
+    "reported_bler_max_percent": 6
+  },
+  "hdr": {
+    "decoder": "nrsc5",
+    "command": "nrsc5 -r broadcast-1488375.cu8 -o /dev/null -t raw 0",
+    "preprocessing": "FFT overlap/crop resampling from2.4MS/s to1,488,375 complex unsigned8 samples/s; pass\u00b1300kHz,stop\u00b1350kHz; continuous30.0seconds",
+    "synchronized": true,
+    "station": "KPBS",
+    "facility_id": 58823,
+    "service_labels": [
+      "HD1",
+      "HD2",
+      "HD3"
+    ],
+    "selected_program": 0,
+    "titles": [
+      "BBC World Service",
+      "KPBS.ORG"
+    ],
+    "frequency_offset_hz": 266,
+    "ber_values": [
+      0.00234,
+      0.002184,
+      0.002044,
+      0.002318,
+      0.001978,
+      0.002148,
+      0.002482,
+      0.002605,
+      0.00223,
+      0.001959,
+      0.002126,
+      0.002441,
+      0.002233,
+      0.002189,
+      0.002154,
+      0.002277,
+      0.002268,
+      0.001978,
+      0.002137
+    ],
+    "limitations": [
+      "Selected program0 only; service advertisements do not establish audio from other programs.",
+      "Decoder reported audio bitrate; audio discarded and not listened to.",
+      "Station-location metadata is transmitted data, not an independently verified transmitter-site fix."
+    ]
+  },
+  "notes": [
+    "Raw IQ and message payloads are not included.",
+    "Capture start/end include small tuner startup/teardown overhead; sample_duration_seconds is exact from file bytes.",
+    "Dependency checks are not end-to-end decoder tests; installed lorarx rejects the browser-required -j argument."
+  ],
+  "service_restore_checks": [
+    {
+      "restart_returncode": 0,
+      "active_after": true
+    },
+    {
+      "restart_returncode": 0,
+      "active_after": true
+    }
+  ],
+  "paging": {
+    "decoder": "multimon-ng FLEX",
+    "integrity": "BCH(31,21), up to2 corrected bits per word; FIW4bit checksum; every88-word phase must pass BCH; no demonstrated end-to-end text checksum/reassembly",
+    "channels": [
+      {
+        "nominal_mhz": 929.9375,
+        "measured_mhz": 929.939941,
+        "recognized_records": 12,
+        "types": {
+          "alphanumeric": 11,
+          "numeric": 1
+        },
+        "unknown_type_records_excluded": 4
+      },
+      {
+        "nominal_mhz": 929.6125,
+        "measured_mhz": 929.615625,
+        "recognized_records": 34,
+        "types": {
+          "alphanumeric": 28,
+          "numeric": 4,
+          "tone_only": 2
+        },
+        "unknown_type_records_excluded": 2
+      }
+    ],
+    "baud": 3200,
+    "levels": 4,
+    "bitrate": 6400,
+    "benign_header_example": {
+      "cycle": 14,
+      "frame": 77,
+      "phase": "A"
+    },
+    "addresses_and_payloads_included": false
+  },
+  "negative_trials": [
+    {
+      "mode": "AIS",
+      "frequencies_mhz": [
+        161.975,
+        162.025
+      ],
+      "seconds": 90,
+      "result": "0 CRC-valid packets"
+    },
+    {
+      "mode": "ADSB",
+      "frequencies_mhz": [
+        1090
+      ],
+      "seconds": 60,
+      "result": "0 accepted frames; CRC repair disabled"
+    },
+    {
+      "mode": "ACARS",
+      "frequencies_mhz": [
+        130.025,
+        130.45,
+        131.55
+      ],
+      "seconds": 90,
+      "result": "0 messages"
+    },
+    {
+      "mode": "VDL2",
+      "frequencies_mhz": [
+        136.65,
+        136.8,
+        136.975
+      ],
+      "seconds": 90,
+      "result": "0 messages"
+    },
+    {
+      "mode": "Packet",
+      "frequencies_mhz": [
+        144.39
+      ],
+      "seconds": 90,
+      "result": "0 CRC-valid AX.25frames"
+    },
+    {
+      "mode": "Digitalvoice",
+      "frequencies_mhz": [
+        446.72,
+        447.28,
+        447.32
+      ],
+      "seconds": 60,
+      "result": "0 corroborated digital decodes"
+    },
+    {
+      "mode": "FT8",
+      "frequencies_mhz": [
+        7.074
+      ],
+      "seconds": 90,
+      "result": "0 decodes"
+    },
+    {
+      "mode": "Meshtastic",
+      "frequencies_mhz": [
+        906.875,
+        908.75
+      ],
+      "seconds": 120,
+      "result": "0 CRC-accepted LoRa frames; standalone CLI"
+    },
+    {
+      "mode": "ISM",
+      "frequencies_mhz": [
+        433.92
+      ],
+      "seconds": 60,
+      "result": "0 decoded events"
+    }
+  ]
+}

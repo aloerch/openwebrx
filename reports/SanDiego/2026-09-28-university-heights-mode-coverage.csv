@@ -1,0 +1,75 @@
+mode_id,menu_name,dependency_available,service_only,evidence_status,frequency_MHz_or_search_range,geographic_scope,settings_and_limits,report_section
+nfm,FM,True,False,documented candidate,162.425; 156.600; 447.320,City sources; reception not confirmed,FM;16-25kHz weather or mode preset,first-listening-sessions
+wfm,WFM,True,False,decoded here,89.500,Mt Soledad City source; received University Heights,WFM180-200kHz; RDS feature,first-listening-sessions
+am,AM,True,False,documented candidate,1.130; AM also126.900,52nd Street/Montgomery City sources,Q direct below25MHz; AM/SAM8-10kHz on1130kHz,broadcast-tone-signaling-and-general-audio-modes
+lsb,LSB,True,False,conditional HF,7.175-7.300,No City station established,LSB2.7-3kHz; find active voice,conditional-hf-lessons
+usb,USB,True,False,conditional HF,8.764,Point Reyes distant,USB; scheduled weather bulletin,conditional-hf-lessons
+cw,CW,True,False,conditional HF,14.100 RF,Distant beacon network,Match CW pitch; 3-minute network cycle,conditional-hf-lessons
+sam,SAM,True,False,documented candidate,1.130; AM also126.900,52nd Street/Montgomery City sources,Q direct below25MHz; AM/SAM8-10kHz on1130kHz,broadcast-tone-signaling-and-general-audio-modes
+usbd,DATA,True,False,general output,No dedicated frequency,Not a distinct RF protocol,Wide USB/data output,broadcast-tone-signaling-and-general-audio-modes
+dmr,DMR,True,False,decoded in prior survey; ham candidates,452.0136 measured; 446.720; 449.4625,Survey sites unknown; K6RRR City label; AI6DZ UTC,DMR preset; CC10 observed; ham CC1/CC6 documented,digital-voice-separate-protocol-recognition-from-conversation
+dstar,D-Star,True,False,no verified City example; distant fallback,447.845,Mt Woodson OUTSIDE City,D-Star preset; reception untested,digital-voice-separate-protocol-recognition-from-conversation
+nxdn,NXDN,True,False,no verified City example,,Unknown,Use known matching sample; NXDN48 support only,digital-voice-separate-protocol-recognition-from-conversation
+ysf,YSF,True,False,unverified digital candidate,447.320,Kearny Mesa City FM source; YSF not owner-confirmed,FM established in listing; tryYSF only if digital traffic,digital-voice-separate-protocol-recognition-from-conversation
+p25,P25,True,False,documented candidate; short test negative,447.280,Mt Soledad City; owner listing2018,P25Phase1C4FM; mixedFM; no automatic trunk following,digital-voice-separate-protocol-recognition-from-conversation
+m17,M17,True,False,no verified City example,,Unknown,Use a known matching M17 recording; Codec2 digital voice,digital-voice-separate-protocol-recognition-from-conversation
+freedv,FreeDV,True,False,conditional HF,14.236 USB,No City operator established,Match actual FreeDV/RADE waveform,conditional-hf-lessons
+tetra,TETRA,False,False,unavailable,,No City example verified,Missing tetrarx dependency,digital-voice-separate-protocol-recognition-from-conversation
+radel,RADEL,True,False,conditional HF,7.177 LSB,No City operator established,RADE lower sideband; match actual waveform,conditional-hf-lessons
+radeu,RADEU,True,False,conditional HF,14.236 USB,No City operator established,Match actual FreeDV/RADE waveform,conditional-hf-lessons
+drm,DRM,True,False,no verified local example,,No local transmitter established,Distinct from HDR; use identified recording or current schedule,broadcast-tone-signaling-and-general-audio-modes
+dab,DAB,True,False,no verified local example,,No local transmitter established,Distinct from HDR; use identified recording or current schedule,broadcast-tone-signaling-and-general-audio-modes
+hdr,HDR,True,False,decoded here,89.500,KPBS Mt Soledad City source,HDR400kHz; station/service metadata confirmed; audio not assessed,first-listening-sessions
+bpsk31,BPSK31,True,False,conditional HF,14.070 USB,No City operator established,Select narrow PSK31 trace within passband,conditional-hf-lessons
+bpsk63,BPSK63,True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+rtty170,RTTY-170 (45),True,False,conditional HF,14.070-14.095 search,No City operator established,170Hz shift;45.45baud; actual RTTY needed,conditional-hf-lessons
+rtty450,RTTY-450 (50N),True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+rtty85,RTTY-85 (50N),True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+sitorb,SITOR-B,True,False,conditional distant MF,0.518 RF,Cambria coastal transmitter OUTSIDE City,Q direct; USB belowRFcenter; secondary selector centered on FSK,conditional-hf-lessons
+navtex,NAVTEX,True,False,conditional distant MF,0.518 RF,Cambria coastal transmitter OUTSIDE City,Q direct; USB belowRFcenter; secondary selector centered on FSK,conditional-hf-lessons
+dsc,DSC,True,False,conditional HF,8.4145 RF,Worldwide maritime; no City transmitter established,Q direct; USB+secondary selector; not VHFchannel70 decoder,conditional-hf-lessons
+ft8,FT8,True,False,conditional HF,14.074 USB;7.074 USB,No City operator established,Timed15s; synchronized clock,conditional-hf-lessons
+ft4,FT4,True,False,conditional HF,14.080 USB,No City operator established,Timed7.5s,conditional-hf-lessons
+jt65,JT65,True,False,conditional HF,14.076 USB,No City operator established,Conventional frequency; current activity unverified,conditional-hf-lessons
+jt9,JT9,True,False,conditional HF,14.078 USB,No City operator established,Conventional frequency; distinguish fromJS8,conditional-hf-lessons
+wspr,WSPR,True,False,conditional HF,14.0956 USB dial,No City operator established,RFnear14.0971;10-20minutes,conditional-hf-lessons
+fst4,FST4,True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+fst4w,FST4W,True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+q65,Q65,True,False,no verified local example,,No local source/channel established,Use correctly identified mode-specific recordings,conditional-hf-lessons
+msk144,MSK144,True,False,conditional scatter,50.260 USB;28.145 USB,No City operator established,Organized activity; suitable antenna/propagation needed,conditional-hf-lessons
+js8,JS8Call,True,False,conditional HF,14.078 USB,No City operator established,JS8Call decoder;10-15minutes,conditional-hf-lessons
+packet,Packet,True,False,documented candidate; short test negative,144.390,Shared channel; no City transmitter site established,FM1200baud AX.25/APRS;10-15minutes,first-listening-sessions
+ais,AIS,True,False,documented candidate; short test negative,161.975;162.025,Mobile vessels; no City transmitter site established,AISpreset; possible20-25kHz filter,first-listening-sessions
+page,Page,True,False,FLEX decoded here; no confirmed POCSAG,929.9375 nominal /929.93994 measured;929.6125 nominal /929.61563 measured,Received University Heights; transmitter sites unverified,Page/FM20-25kHz; FLEX3200baud4levels; BCH-accepted phases; payload integrity limited,broadcast-tone-signaling-and-general-audio-modes
+cwdecoder,CW Decoder,True,False,conditional HF,14.100 RF,Distant beacon network,Match CW pitch; 3-minute network cycle,conditional-hf-lessons
+cwskimmer,CW Skimmer,True,False,conditional HF,14.100 RF,Distant beacon network,Match CW pitch; 3-minute network cycle,conditional-hf-lessons
+rttyskimmer,RTTY Skimmer,True,False,conditional HF,14.070-14.095 search,No City operator established,170Hz shift;45.45baud; actual RTTY needed,conditional-hf-lessons
+sstv,SSTV,True,False,scheduled satellite,437.550,ISS; not City ground transmitter,"FM+SSTV Robot36; Oct2-6,2026 event; Doppler",weather-balloons-and-scheduled-satellite-lessons
+fax,Fax,True,False,scheduled distant HF,8.6801 USB;12.7841 USB,Point Reyes OUTSIDE City,Fax120LPM IOC576;1.9kHz below RF frequency,conditional-hf-lessons
+selcall,SelCall,True,False,no verified City example,,Unknown,Tone-code-specific samples; not CTCSS/DCS/CW,broadcast-tone-signaling-and-general-audio-modes
+zvei,Zvei,True,False,no verified City example,,Unknown,Tone-code-specific samples; not CTCSS/DCS/CW,broadcast-tone-signaling-and-general-audio-modes
+eas,EAS,True,False,scheduled candidate,162.425,Mt Soledad City weather source,EAS during SAME test/alert; ordinary voice not data,broadcast-tone-signaling-and-general-audio-modes
+ism,ISM,True,False,device-dependent candidate,433.920,Nearby compatible sensor not established,ISM/rtl_433; device-specific formats,sensors-lora-and-mesh-packets
+wmbus,WMBus,True,False,no verified City example,,No known compatible local source/channel,Use known matching device or recording; not universal915MHz,sensors-lora-and-mesh-packets
+hfdl,HFDL,True,False,conditional distant HF,10.081;8.927;6.559 USB,San Francisco network; not City ground site,Q direct; active channels vary,conditional-hf-lessons
+vdl2,VDL2,True,False,documented candidate; short test negative,136.975;136.650;136.800,Aircraft/network; no City ground site established,VDL2preset25kHz,first-listening-sessions
+acars,ACARS,True,False,documented candidate; short test negative,131.550;130.025;130.450,Aircraft/network; no City ground site established,ACARS/AM12kHz,first-listening-sessions
+adsb,ADSB,True,False,documented candidate; short test negative,1090.000,Aircraft; not fixed City source,ADSB2.4MS/s; daytime10minutes,first-listening-sessions
+uat,UAT,True,False,documented candidate,978.000,Aircraft/ground data; no City source established,UAT2.083334MS/s; reception untested,first-listening-sessions
+speech,Speech Transcriber,True,False,unvalidated transcription exercise,162.425;126.900,City weather/airport sources,SpeechTranscriber with correctFM/AM; no error-checked protocol,broadcast-tone-signaling-and-general-audio-modes
+lora-wan,LoRa WAN,True,False,no verified City example; browser CLI incompatibility confirmed,,No known compatible local source/channel,Use known matching device or recording; not universal915MHz; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+lora-aprs,LoRa APRS,True,False,no verified City example; browser CLI incompatibility confirmed,,No known compatible local source/channel,Use known matching device or recording; not universal915MHz; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+lora-fanet,LoRa FANET,True,False,nominal plan; local source and compatibility gap; browser CLI incompatibility confirmed,920.800,No City FANETpilot established,US500kHz; installedchain fixed250kHz mismatch; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+meshtastic,Meshtastic,True,False,regional candidate; browser CLI incompatibility confirmed,908.750;906.875,No City transmitter site established,LongTurbo500kHzSF11CR4/8;LongFast250kHzSF11CR4/5; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+meshcore,Meshcore,True,False,regional candidate; browser CLI incompatibility confirmed,927.875,Temecula operator OUTSIDE City; not reception claim,62.5kHzSF7CR4/5; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+meshcom,MeshCom,True,False,no verified City example; browser CLI incompatibility confirmed,,No known compatible local source/channel,Use known matching device or recording; not universal915MHz; installed lorarx rejects required -j option,sensors-lora-and-mesh-packets
+sonde-rs41,Sonde RS41,True,False,City launch source; exact frequency unverified,400.15-406 search,KNKX/Miramar City; airborne thereafter,RS41; check current launch and actual RF channel,weather-balloons-and-scheduled-satellite-lessons
+sonde-dfm9,Sonde DFM9,True,False,no verified City example,,No matching local launcher/channel established,Use model-specific recordings,weather-balloons-and-scheduled-satellite-lessons
+sonde-dfm17,Sonde DFM17,True,False,no verified City example,,No matching local launcher/channel established,Use model-specific recordings,weather-balloons-and-scheduled-satellite-lessons
+sonde-mts01,Sonde MTS01,True,False,no verified City example,,No matching local launcher/channel established,Use model-specific recordings,weather-balloons-and-scheduled-satellite-lessons
+sonde-m10,Sonde M10,True,False,no verified City example,,No matching local launcher/channel established,Use model-specific recordings,weather-balloons-and-scheduled-satellite-lessons
+sonde-m20,Sonde M20,True,False,no verified City example,,No matching local launcher/channel established,Use model-specific recordings,weather-balloons-and-scheduled-satellite-lessons
+audio,Audio Recorder,True,True,service-only general recording,,Not an RF protocol,Configure audio recorder service,service-only-modes
+meteor-lrpt,Meteor-M2 LRPT,True,True,service-only conditional satellite,137.100;137.900 nominal,Satellite; current operational frequency unverified,Verify satellite/pass/symbolrate; backgroundservice,service-only-modes
+elektro-lrit,Elektro-L LRIT,True,True,service-only; no practical local example,1691 nominal,Satellite; visibility/system not established,Current dipole insufficient as established learning setup,service-only-modes
+rds,RDS (WFM feature),True,False,decoded here,89.500,KPBS Mt Soledad City source,WFM;338completegroups without FEC;PI0x37C8;KPBS.ORG,first-listening-sessions

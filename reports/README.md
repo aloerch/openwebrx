@@ -1,10 +1,14 @@
 # Local radio surveys
 
-Regional Markdown reports contain observations from an actual recording, with
+Regional Markdown surveys contain observations from an actual recording, with
 frequencies in MHz, evidence for modulation and protocol identification, and
 OpenWebRX+ receiver/decoder settings to try. Start with [San Diego](SanDiego/).
 
-A report is a snapshot of reception at one antenna during one observation period.
+Learning guides may also contain researched listening candidates. They distinguish
+verified reception from documented transmitter sites, regional channel plans,
+distant or scheduled signals, and modes without a verified local example.
+
+A survey is a snapshot of reception at one antenna during one observation period.
 It is not a complete frequency directory: silent transmitters, weak signals,
 overlapping transmissions, receiver artifacts, and tuning errors limit detection.
 A database allocation alone is not evidence that a transmitter was received.
@@ -27,6 +31,6 @@ limitations. Use dated filenames so later observations supplement earlier ones.
 Raw IQ, demodulated audio, and decoded message contents stay outside Git. Reports
 summarize signal characteristics and protocol evidence. Small plots and tables
 may accompany the Markdown. Local captures are currently kept in the ignored
-`.build-linux/region-scan-453/` directory; that build directory can be removed by
+`.build-linux/region-scan-453/` and `.build-linux/learning-guide/` directories; that build directory can be removed by
 build-cleaning commands, so copy captures elsewhere if permanent retention is
 needed.
