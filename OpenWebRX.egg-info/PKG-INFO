@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: OpenWebRX
+Version: 1.2.125
+Home-page: https://www.openwebrx.de/
+Author: Marat Fayzullin
+Author-email: luarvique@gmail.com
+Maintainer: Marat Fayzullin
+Maintainer-email: luarvique@gmail.com
+License: GAGPL
+Requires-Python: >=3.5
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-python

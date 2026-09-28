@@ -3,4 +3,6 @@
 tags
 .idea
 packages
-\n.build-linux/\n
+
+.build-linux/
+.build-linux-prod/

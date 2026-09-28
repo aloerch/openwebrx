@@ -675,30 +675,10 @@ receivers_plan(){
 }
 
 install_app(){
-  python -m pip install --no-build-isolation --editable "$ROOT"
-  if [[ ! -f "$CONF" ]]; then
-    cat >"$CONF" <<EOF
-[core]
-data_directory = $DATA
-temporary_directory = $TMP
-log_level = INFO
-
-[web]
-port = 8073
-ipv6 = true
-bind_address = ::1
-
-[aprs]
-symbols_path = $PREFIX/share/aprs-symbols/png
-EOF
-  fi
-  cat >"$PREFIX/env.sh" <<EOF
-export OWRX_PREFIX="$PREFIX"
-export PATH="$VENV/bin:$PREFIX/bin:\$PATH"
-export CMAKE_PREFIX_PATH="$PREFIX\${CMAKE_PREFIX_PATH:+:\$CMAKE_PREFIX_PATH}"
-export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig:$PREFIX/lib64/pkgconfig:$PREFIX/share/pkgconfig\${PKG_CONFIG_PATH:+:\$PKG_CONFIG_PATH}"
-export LD_LIBRARY_PATH="$PREFIX/lib:$PREFIX/lib64\${LD_LIBRARY_PATH:+:\$LD_LIBRARY_PATH}"
-EOF
+  local options=(--no-build-isolation)
+  if [[ "$MODE" == dev ]]; then options+=(--editable); else options+=(--no-cache-dir); fi
+  python -m pip install "${options[@]}" "$ROOT"
+  deployment_install
 }
 
 check(){ if command -v "$2" >/dev/null 2>&1; then printf '  %-28s PASS  %s\n' "$1" "$(command -v "$2")"; else printf '  %-28s MISS\n' "$1"; fi; }
@@ -749,10 +729,15 @@ check_patches(){
 }
 
 runtime_helper(){
-  "$VENV/bin/python" "$ROOT/build/source_runtime.py" "$1" \
-    --root "$ROOT" --prefix "$PREFIX" --venv "$VENV" --config "$CONF" \
-    --logs "$LOG" --state "$STATE" --model "$WHISPER_MODEL" \
-    --model-name "$WHISPER_MODEL_NAME" --speech-url "$WHISPER_URL" --jobs "$JOBS"
+  local action="$1"; shift
+  if [[ "$MODE" == prod ]]; then
+    "$VENV/bin/python" -I "$RUNTIME_HOME/linux_deploy.py" runtime "$RUNTIME_HOME/runtime.json" "$action"
+  else
+    "$VENV/bin/python" "$ROOT/build/source_runtime.py" "$action" \
+      --mode dev --root "$ROOT" --prefix "$PREFIX" --venv "$VENV" --config "$CONF" \
+      --logs "$LOG" --state "$STATE" --model "$WHISPER_MODEL" \
+      --model-name "$WHISPER_MODEL_NAME" --speech-url "$WHISPER_URL" --jobs "$JOBS" --app-args "$@"
+  fi
 }
 
 configure_whisper(){ runtime_helper configure; }
@@ -803,7 +788,7 @@ diagnostics(){
 }
 
 build_all(){
-  layout; install_system_deps; env_setup; touch "$STATE/optional-failures.txt" "$STATE/optional-skips.txt"
+  prepare_build_mode; layout; install_system_deps; env_setup; touch "$STATE/optional-failures.txt" "$STATE/optional-skips.txt"
   case "$PROFILE" in
     core) core_plan ;;
     decoders) core_plan; decoders_plan ;;
@@ -813,56 +798,22 @@ build_all(){
   esac
   install_app; configure_whisper; doctor; feature_report || true
   if [[ -s "$STATE/optional-failures.txt" ]]; then warn "Optional failures:"; sort -u "$STATE/optional-failures.txt" >&2; warn "Logs: $LOG"; else ok "Requested source build completed."; fi
-  info "Run: $0 run"
+  info "Run: $0 run $MODE"
 }
 
 run_app(){
+  [[ -f "$CONF" ]] || die "run build $MODE first"
+  if [[ "$MODE" == prod ]]; then
+    production_required
+    exec "$PREFIX/bin/openwebrx" "${APP_ARGS[@]}"
+  fi
   activate_env
-  [[ -f "$CONF" ]] || die "run build first"
-  runtime_helper run
+  runtime_helper run "${APP_ARGS[@]}"
 }
-usage(){ cat <<EOF
-Usage: ./build-linux.sh [options] [build|run|doctor|feature-report|diagnostics|failures|check-refs|check-patches|env|clean|uninstall]
-  --profile full|core|decoders|receivers
-  --prefix PATH
-  --latest                 use dependency branch heads instead of locked refs
-  --force                  rebuild successful stamped components
-  --strict                 optional component failures are fatal
-  --no-system-packages     do not call zypper/apt/dnf/pacman
 
-Default: full source build into ~/.local/openwebrx-source.
-EOF
-}
+# Keep deployment policy separate from dependency recipes and their patches.
+source "$ROOT/build/linux_profiles.sh"
 
 # Source only the functions when running offline regression tests.
 [[ "${BASH_SOURCE[0]}" == "$0" ]] || return 0
-
-CMD=build
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-    build|run|doctor|feature-report|diagnostics|failures|check-refs|check-patches|env|clean|uninstall|help) CMD="$1"; shift ;;
-    --profile) PROFILE="$2"; shift 2 ;;
-    --prefix) PREFIX="$2"; VENV="$PREFIX/venv"; CONF="$PREFIX/etc/openwebrx/openwebrx.conf"; DATA="$PREFIX/var/lib/openwebrx"; TMP="$PREFIX/var/tmp"; WHISPER_DIR="$PREFIX/share/whisper"; WHISPER_MODEL="$WHISPER_DIR/ggml-$WHISPER_MODEL_NAME.bin"; shift 2 ;;
-    --latest) LATEST=1; shift ;;
-    --force) FORCE=1; shift ;;
-    --strict) STRICT=1; shift ;;
-    --no-system-packages) INSTALL_SYS=0; shift ;;
-    -h|--help) CMD=help; shift ;;
-    *) die "unknown argument: $1" ;;
-  esac
-done
-
-case "$CMD" in
-  build) build_all ;;
-  run) run_app ;;
-  doctor) doctor ;;
-  feature-report) feature_report ;;
-  diagnostics) diagnostics ;;
-  failures) failure_report ;;
-  check-refs) check_refs ;;
-  check-patches) check_patches ;;
-  env) cat "$PREFIX/env.sh" ;;
-  clean) rm -rf "$WORK" ;;
-  uninstall) rm -rf "$PREFIX" "$WORK" ;;
-  help) usage ;;
-esac
+build_linux_main "$@"
